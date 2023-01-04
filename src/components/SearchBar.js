@@ -3,6 +3,7 @@ import styled from "styled-components";
 const SearchBarStyles = styled.div`
   position: relative;
   width: 100%;
+  margin-bottom: 2rem;
   input {
     background-color: var(--clr-dark-blue);
     border-radius: var(--bdr-rds);
