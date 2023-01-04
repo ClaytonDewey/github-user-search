@@ -8,6 +8,9 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --clr-dark: #141D2F;
     --clr-light: #f6f8ff;
+    --clr-dark-blue: #1E2A47;
+    --clr-primary: #0079FF;
+    --white: #fff;
 
     --ff-mono: "Space Mono";
     --fw-bold: 700;
@@ -17,6 +20,8 @@ const GlobalStyles = createGlobalStyle`
     --fs-md: 1.6rem;
     --fs-sm: 1.5rem;
     --fs-xsm: 1.3rem;
+
+    --bdr-rds: 1.2rem;
   }
   html {
     background: var(--clr-dark);
