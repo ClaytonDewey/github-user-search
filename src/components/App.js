@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SearchBar from "./SearchBar";
+import UserCard from "./UserCard";
 
 const AppStyles = styled.div`
   max-width: 73rem;
@@ -16,6 +17,7 @@ const App = () => {
       <p>Dark</p>
 
       <SearchBar />
+      <UserCard />
     </AppStyles>
   );
 };
