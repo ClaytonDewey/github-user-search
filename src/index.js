@@ -1,4 +1,5 @@
 import React from "react";
+import "./reset.css";
 import ReactDOM from "react-dom/client";
 import { createGlobalStyle } from "styled-components";
 import App from "./components/App";
@@ -23,6 +24,19 @@ const GlobalStyles = createGlobalStyle`
 
     --bdr-rds: 1.2rem;
   }
+  *,
+  *::after,
+  *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+  }
+  html,
+  body {
+    margin: 0px auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
   html {
     background: var(--clr-dark);
     color: var(--clr-light);
@@ -31,6 +45,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 62.5%;
   }
   body {
+    position: relative;
     font-size: var(--fs-sm);
     line-height: 2.5rem;
     font-weight: var(--fw-reg);
