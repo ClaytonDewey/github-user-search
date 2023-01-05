@@ -9,6 +9,18 @@ const AppStyles = styled.div`
 `;
 
 const App = () => {
+  /* let search - document.getElementById("search").value
+  * let orginalName = search.split(" ").join("")
+  https://www.youtube.com/watch?v=LO74qEfPfI8
+  */
+  const user = fetch(`https://api.github.com/users/ClaytonDewey`)
+    .then((res) => res.json())
+    .then((data) => {
+      // console.log(data);
+      return data;
+    })
+    .catch((err) => console.error(err));
+  console.log(user);
   return (
     <AppStyles>
       <h1>devfinder</h1>
