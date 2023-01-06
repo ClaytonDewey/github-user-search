@@ -70,6 +70,9 @@ const GlobalStyles = createGlobalStyle`
   h3, h4 {
     font-weight: var(--fw-reg);
   }
+  button {
+    cursor: pointer;
+  }
 `;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
