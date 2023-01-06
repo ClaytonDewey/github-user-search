@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import UserInfo from "./UserInfo";
+import styled from 'styled-components';
+import UserInfo from './UserInfo';
 
 const UserCardStyles = styled.div`
   background-color: var(--clr-dark-blue);
@@ -16,7 +16,11 @@ const UserCardStyles = styled.div`
 const UserCard = ({ user }) => {
   const joinedDate = new Date(
     Date.parse(user.created_at)
-  ).toLocaleDateString('en-us', {month: 'long', day: 'numeric', year: 'numeric'});
+  ).toLocaleDateString('en-us', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  });
 
   return (
     <UserCardStyles>

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import styled from "styled-components";
+import { useState } from 'react';
+import styled from 'styled-components';
 
 const SearchBarStyles = styled.form`
   position: relative;
@@ -26,21 +26,26 @@ const SearchBarStyles = styled.form`
   }
 `;
 
-const SearchBar = ({ search, userName }) => {
-  const [searchTerm,setSearchTerm] = useState('');
+const SearchBar = ({ search, error }) => {
+  const [searchTerm, setSearchTerm] = useState('');
   const handleChange = (e) => {
-    setSearchTerm(e.target.value)
-  }
+    setSearchTerm(e.target.value);
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     search(searchTerm);
-  }
+  };
 
   return (
     <SearchBarStyles onSubmit={handleSubmit}>
-      <input type="search" onChange={handleChange} placeholder="Search GitHub username..." />
-      <button type="submit">Search</button>
+      <input
+        type='search'
+        onChange={handleChange}
+        placeholder='Search GitHub username...'
+      />
+      {error && <p style={{ color: 'red' }}>No results</p>}
+      <button type='submit'>Search</button>
     </SearchBarStyles>
   );
 };
