@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import SearchBar from "./SearchBar";
 import UserCard from "./UserCard";
@@ -9,18 +10,27 @@ const AppStyles = styled.div`
 `;
 
 const App = () => {
-  /* let search - document.getElementById("search").value
-  * let orginalName = search.split(" ").join("")
-  https://www.youtube.com/watch?v=LO74qEfPfI8
-  */
-  const user = fetch(`https://api.github.com/users/ClaytonDewey`)
-    .then((res) => res.json())
-    .then((data) => {
-      // console.log(data);
-      return data;
-    })
-    .catch((err) => console.error(err));
-  console.log(user);
+  const apiUrl = 'https://api.github.com/users/';
+  const [userName, setUserName] = useState('octocat')
+  const [user, setUser] = useState({});
+
+  const search = (user) => {
+    fetch(`${apiUrl}${user}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setUser(data);
+      })
+      .catch((err) => console.error(err));
+  };
+
+  useEffect(() => {
+    search(userName)
+  }, [userName])
+
+  const updateUser = (user) => {
+    setUserName(user);
+  }
+
   return (
     <AppStyles>
       <h1>devfinder</h1>
@@ -28,8 +38,8 @@ const App = () => {
       <p>Light</p>
       <p>Dark</p>
 
-      <SearchBar />
-      <UserCard />
+      <SearchBar updateUser={updateUser} search={search} userName={userName} />
+      <UserCard user={user} />
     </AppStyles>
   );
 };
