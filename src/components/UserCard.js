@@ -14,13 +14,13 @@ const UserCardStyles = styled.div`
 `;
 
 const UserCard = ({ user }) => {
-  const joinedDate = new Date(
-    Date.parse(user.created_at)
-  ).toLocaleDateString('en-us', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  });
+  const joinedDate = new Date(Date.parse(user.created_at))
+    .toLocaleDateString('en-us', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric',
+    })
+    .replace(',', ' ');
 
   return (
     <UserCardStyles>

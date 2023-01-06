@@ -12,6 +12,10 @@ const SearchBarStyles = styled.form`
     border: none;
     height: 6.9rem;
     width: 100%;
+    padding-left: 7.5rem;
+    background-image: url('./icon-search.svg');
+    background-repeat: no-repeat;
+    background-position: 2.5rem 50%;
   }
   button {
     position: absolute;
@@ -23,6 +27,12 @@ const SearchBarStyles = styled.form`
     border-radius: var(--bdr-rds);
     height: 5rem;
     width: 10.6rem;
+  }
+  .error {
+    color: red;
+    position: absolute;
+    right: 15rem;
+    top: 35%;
   }
 `;
 
@@ -44,7 +54,7 @@ const SearchBar = ({ search, error }) => {
         onChange={handleChange}
         placeholder='Search GitHub username...'
       />
-      {error && <p style={{ color: 'red' }}>No results</p>}
+      {error && <p className='error'>No results</p>}
       <button type='submit'>Search</button>
     </SearchBarStyles>
   );

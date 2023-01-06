@@ -24,6 +24,7 @@ const App = () => {
       })
       .then((data) => {
         if (data) {
+          setError(false);
           setUser(data);
         } else {
           setError(true);
