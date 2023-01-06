@@ -1,19 +1,30 @@
 import styled from "styled-components";
+import UserInfo from "./UserInfo";
 
 const UserCardStyles = styled.div`
   background-color: var(--clr-dark-blue);
   border-radius: var(--bdr-rds);
+  padding: 4rem;
+
+  img {
+    border-radius: 50%;
+    height: 11.7rem;
+    width: 11.7rem;
+  }
 `;
 
-const UserCard = () => {
+const UserCard = ({ user }) => {
+  const joinedDate = new Date(
+    Date.parse(user.created_at)
+  ).toLocaleDateString('en-us', {month: 'long', day: 'numeric', year: 'numeric'});
+
   return (
     <UserCardStyles>
-      <h2>The Octocat</h2>
-      <p>Joined 25 Jan 2011</p>
+      <UserInfo user={user} joinedDate={joinedDate} />
 
-      <p>Repos</p>
+      {/* <p>Repos</p>
       <p>Followers</p>
-      <p>Following</p>
+      <p>Following</p> */}
     </UserCardStyles>
   );
 };
