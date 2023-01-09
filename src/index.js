@@ -1,9 +1,9 @@
-import React from "react";
-import "./reset.css";
-import ReactDOM from "react-dom/client";
-import { createGlobalStyle } from "styled-components";
-import App from "./components/App";
-import reportWebVitals from "./reportWebVitals";
+import React from 'react';
+import './reset.css';
+import ReactDOM from 'react-dom/client';
+import { createGlobalStyle } from 'styled-components';
+import App from './components/App';
+import reportWebVitals from './reportWebVitals';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -11,6 +11,8 @@ const GlobalStyles = createGlobalStyle`
     --clr-light: #f6f8ff;
     --clr-dark-blue: #1E2A47;
     --clr-primary: #0079FF;
+    --clr-lt-blue: #60ABFF;
+    --clr-faded-white: #8d95a2;
     --white: #fff;
 
     --ff-mono: "Space Mono";
@@ -75,7 +77,7 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <GlobalStyles />
