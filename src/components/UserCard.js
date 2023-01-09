@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import UserInfo from './UserInfo';
+import UserLinks from './UserLinks';
 import UserStats from './UserStats';
 
 const UserCardStyles = styled.div`
@@ -7,10 +8,8 @@ const UserCardStyles = styled.div`
   border-radius: var(--bdr-rds);
   padding: 4rem;
 
-  img {
-    border-radius: 50%;
-    height: 11.7rem;
-    width: 11.7rem;
+  .faded {
+    color: var(--clr-faded-white);
   }
 `;
 
@@ -28,6 +27,11 @@ const UserCard = ({ user }) => {
       <UserInfo user={user} joinedDate={joinedDate} />
 
       <UserStats user={user} />
+
+      <UserLinks user={user} linkType='location' />
+      <UserLinks user={user} linkType='twitter' />
+      <UserLinks user={user} linkType='website' />
+      <UserLinks user={user} linkType='company' />
     </UserCardStyles>
   );
 };
