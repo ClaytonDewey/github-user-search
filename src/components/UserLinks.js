@@ -4,8 +4,18 @@ import { Icon } from '../svg';
 const UserLinksStyled = styled.div`
   background-color: transparent;
   color: var(--white);
+
   svg {
+    margin-right: 2rem;
     fill: var(--white);
+  }
+
+  &.faded {
+    color: var(--clr-faded-white);
+
+    svg {
+      fill: var(--clr-faded-white);
+    }
   }
 `;
 const UserLinks = ({ user, linkType }) => {
@@ -27,7 +37,7 @@ const UserLinks = ({ user, linkType }) => {
       link = user.blog;
   }
   return (
-    <UserLinksStyled>
+    <UserLinksStyled className={!link ? 'faded' : ''}>
       <div>
         <Icon name={linkType} />
         {link ? <>{link}</> : 'Not Available'}
