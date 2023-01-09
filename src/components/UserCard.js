@@ -7,10 +7,11 @@ const UserCardStyles = styled.div`
   background-color: var(--clr-dark-blue);
   border-radius: var(--bdr-rds);
   padding: 4rem;
+`;
 
-  .faded {
-    color: var(--clr-faded-white);
-  }
+const GridStyles = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
 
 const UserCard = ({ user }) => {
@@ -28,10 +29,12 @@ const UserCard = ({ user }) => {
 
       <UserStats user={user} />
 
-      <UserLinks user={user} linkType='location' />
-      <UserLinks user={user} linkType='twitter' />
-      <UserLinks user={user} linkType='website' />
-      <UserLinks user={user} linkType='company' />
+      <GridStyles>
+        <UserLinks user={user} linkType='location' />
+        <UserLinks user={user} linkType='twitter' />
+        <UserLinks user={user} linkType='website' />
+        <UserLinks user={user} linkType='company' />
+      </GridStyles>
     </UserCardStyles>
   );
 };
