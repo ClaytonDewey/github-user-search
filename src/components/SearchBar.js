@@ -27,6 +27,11 @@ const SearchBarStyles = styled.form`
     border-radius: var(--bdr-rds);
     height: 5rem;
     width: 10.6rem;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      background-color: var(--clr-lt-blue);
+    }
   }
   .error {
     color: red;
