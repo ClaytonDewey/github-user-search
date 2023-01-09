@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import UserInfo from './UserInfo';
+import UserStats from './UserStats';
 
 const UserCardStyles = styled.div`
   background-color: var(--clr-dark-blue);
@@ -26,9 +27,7 @@ const UserCard = ({ user }) => {
     <UserCardStyles>
       <UserInfo user={user} joinedDate={joinedDate} />
 
-      {/* <p>Repos</p>
-      <p>Followers</p>
-      <p>Following</p> */}
+      <UserStats user={user} />
     </UserCardStyles>
   );
 };
