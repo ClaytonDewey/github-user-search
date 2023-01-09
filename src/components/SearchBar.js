@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import { Icon } from '../svg';
 
 const SearchBarStyles = styled.form`
   position: relative;
@@ -13,9 +14,12 @@ const SearchBarStyles = styled.form`
     height: 6.9rem;
     width: 100%;
     padding-left: 7.5rem;
-    background-image: url('./icon-search.svg');
-    background-repeat: no-repeat;
-    background-position: 2.5rem 50%;
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 2.5rem;
+    transform: translateY(-50%);
   }
   button {
     position: absolute;
@@ -59,6 +63,7 @@ const SearchBar = ({ search, error }) => {
         onChange={handleChange}
         placeholder='Search GitHub username...'
       />
+      <Icon name='search' />
       {error && <p className='error'>No results</p>}
       <button type='submit'>Search</button>
     </SearchBarStyles>
