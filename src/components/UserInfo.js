@@ -1,9 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const UserInfoStyles = styled.div`
-  /* background-color: rebeccapurple;
-  border-radius: 15px; */
-`
+  img {
+    border-radius: 50%;
+    height: 11.7rem;
+    width: 11.7rem;
+  }
+`;
 
 const UserInfo = ({ user, joinedDate }) => {
   return (
@@ -15,6 +18,6 @@ const UserInfo = ({ user, joinedDate }) => {
       {!user.bio ? <p>No user bio</p> : <p>{user.bio}</p>}
     </UserInfoStyles>
   );
-}
+};
 
 export default UserInfo;
