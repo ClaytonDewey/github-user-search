@@ -48,7 +48,8 @@ const SearchBarStyles = styled.form`
 const SearchBar = ({ search, error }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const handleChange = (e) => {
-    setSearchTerm(e.target.value);
+    const name = e.target.value.replaceAll(' ', '');
+    setSearchTerm(name);
   };
 
   const handleSubmit = (e) => {
