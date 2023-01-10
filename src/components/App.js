@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { Icon } from '../svg';
 import SearchBar from './SearchBar';
 import UserCard from './UserCard';
 
@@ -45,8 +46,12 @@ const App = () => {
     <AppStyles>
       <h1>devfinder</h1>
 
-      <p>Light</p>
-      <p>Dark</p>
+      <p>
+        Light <Icon name='sun' />
+      </p>
+      <p>
+        Dark <Icon name='moon' />
+      </p>
 
       <SearchBar
         updateUser={updateUser}
