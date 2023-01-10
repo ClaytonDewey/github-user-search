@@ -5,14 +5,14 @@ const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 
   p {
-    color: var(--clr-blue-gray);
+    /* color: var(--clr-blue-gray); */
   }
   svg {
     vertical-align: text-bottom;
-    fill: var(--clr-blue-gray);
+    /* fill: var(--clr-blue-gray); */
   }
 `;
 
