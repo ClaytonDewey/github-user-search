@@ -5,7 +5,6 @@ const UserLinksStyled = styled.div`
   background-color: transparent;
   color: var(--white);
   margin-bottom: 1rem;
-
   a {
     color: var(--white);
   }
@@ -23,8 +22,20 @@ const UserLinksStyled = styled.div`
       fill: var(--clr-faded-white);
     }
   }
+  &.div1 {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+  &.div2 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  &.div3 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  &.div4 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
 `;
-const UserLinks = ({ user, linkType }) => {
+const UserLinks = ({ user, linkType, idx }) => {
   let link;
   switch (linkType) {
     case 'location':
@@ -43,7 +54,7 @@ const UserLinks = ({ user, linkType }) => {
       link = user.blog;
   }
   return (
-    <UserLinksStyled className={!link ? 'faded' : ''}>
+    <UserLinksStyled className={!link ? `faded ${idx}` : `${idx}`}>
       <div>
         <Icon name={linkType} />
         {linkType === 'twitter' ? (
