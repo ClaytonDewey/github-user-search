@@ -14,7 +14,7 @@ const UserInfo = ({ user, joinedDate }) => {
     <UserInfoStyles>
       <GridStyles>
         <div>
-          <h2>{user.name}</h2>
+          {user.name ? <h2>{user.name}</h2> : <h2>Not Available</h2>}
           <a href={user.html_url} target='_blank' rel='noreferrer'>
             @{user.login}
           </a>
