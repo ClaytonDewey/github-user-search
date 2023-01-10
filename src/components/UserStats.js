@@ -6,6 +6,7 @@ const UserStatsStyled = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 2rem;
+  margin-bottom: 2rem;
   div {
     display: inline;
     span {
