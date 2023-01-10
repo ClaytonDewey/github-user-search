@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GridStyles } from '..';
+import { GridStyles } from './App';
 
 const UserInfoStyles = styled.div`
   margin-bottom: 3rem;
