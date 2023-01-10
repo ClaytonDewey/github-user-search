@@ -15,13 +15,15 @@ const UserInfo = ({ user, joinedDate }) => {
       <GridStyles>
         <div>
           {user.name ? <h2>{user.name}</h2> : <h2>Not Available</h2>}
-          <a href={user.html_url} target='_blank' rel='noreferrer'>
-            @{user.login}
-          </a>
+          <h3>
+            <a href={user.html_url} target='_blank' rel='noreferrer'>
+              @{user.login}
+            </a>
+          </h3>
         </div>
-        <p>Joined {joinedDate}</p>
+        <p style={{ textAlign: 'right' }}>Joined {joinedDate}</p>
       </GridStyles>
-      {!user.bio ? <p>No user bio</p> : <p>{user.bio}</p>}
+      {!user.bio ? <p>This profile has no bio</p> : <p>{user.bio}</p>}
     </UserInfoStyles>
   );
 };
