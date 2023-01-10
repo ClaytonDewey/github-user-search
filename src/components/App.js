@@ -10,6 +10,19 @@ const AppStyles = styled.div`
   margin-right: auto;
 `;
 
+export const GridStyles = styled.div.attrs((props) => ({
+  gtc: props.gtc || '1fr 1fr',
+  gtr: props.gtr || '',
+  gcg: props.gcg || '0',
+  grg: props.grg || '0',
+}))`
+  display: grid;
+  grid-template-columns: ${(props) => props.gtc};
+  grid-template-rows: ${(props) => props.gtr};
+  grid-column-gap: ${(props) => props.gcg};
+  grid-row-gap: ${(props) => props.grg};
+`;
+
 const App = () => {
   const apiUrl = 'https://api.github.com/users/';
   const [error, setError] = useState(false);
