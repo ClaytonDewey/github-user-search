@@ -92,6 +92,14 @@ const GlobalStyles = createGlobalStyle`
       text-decoration: underline;
     }
   }
+  input {
+    font-family: var(--ff-mono);
+    font-size: var(--fs-md);
+
+    &::placeholder{
+      color: var(--white);
+    }
+  }
 `;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
