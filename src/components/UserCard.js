@@ -38,8 +38,15 @@ const UserCard = ({ user }) => {
         <UserStats user={user} />
 
         <GridStyles>
-          {links.map((link) => {
-            return <UserLinks user={user} linkType={link} />;
+          {links.map((link, idx) => {
+            return (
+              <UserLinks
+                key={idx}
+                idx={`div${idx + 1}`}
+                user={user}
+                linkType={link}
+              />
+            );
           })}
         </GridStyles>
       </div>
