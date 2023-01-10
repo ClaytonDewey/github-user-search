@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import UserInfo from './UserInfo';
 import UserLinks from './UserLinks';
 import UserStats from './UserStats';
-import { GridStyles } from '..';
+import { GridStyles } from './App';
 
 const UserCardStyles = styled.div`
   background-color: var(--clr-dark-blue);
@@ -37,7 +37,12 @@ const UserCard = ({ user }) => {
 
         <UserStats user={user} />
 
-        <GridStyles>
+        <GridStyles
+          gtc='repeat(2, 1fr)'
+          gtr='repeat(2, 1fr)'
+          gcg='2rem'
+          grg='1rem'
+        >
           {links.map((link, idx) => {
             return (
               <UserLinks
