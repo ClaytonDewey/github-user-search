@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     --clr-primary: #0079FF;
     --clr-lt-blue: #60ABFF;
     --clr-faded-white: #8d95a2;
+    --clr-link: #0079FF;
     --white: #fff;
 
     --ff-mono: "Space Mono";
@@ -74,6 +75,14 @@ const GlobalStyles = createGlobalStyle`
   }
   button {
     cursor: pointer;
+  }
+  a {
+    color: var(--clr-link);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
