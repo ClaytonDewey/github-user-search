@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Icon } from '../svg';
+import Header from './Header';
 import SearchBar from './SearchBar';
 import UserCard from './UserCard';
 
 const AppStyles = styled.div`
-  max-width: 73rem;
+  width: 73rem;
   margin-left: auto;
   margin-right: auto;
 `;
@@ -44,14 +44,7 @@ const App = () => {
 
   return (
     <AppStyles>
-      <h1>devfinder</h1>
-
-      <p>
-        Light <Icon name='sun' />
-      </p>
-      <p>
-        Dark <Icon name='moon' />
-      </p>
+      <Header />
 
       <SearchBar
         updateUser={updateUser}
