@@ -94,11 +94,6 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-export const GridStyles = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-`;
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
