@@ -6,6 +6,7 @@ const UserLinksStyled = styled.div`
   color: var(--white);
   margin-bottom: 1rem;
   gap: 0 2rem;
+  overflow: hidden;
   a {
     color: var(--white);
   }
@@ -22,6 +23,11 @@ const UserLinksStyled = styled.div`
     svg {
       fill: var(--clr-faded-white);
     }
+  }
+  div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   &.div1 {
     grid-area: 1 / 1 / 2 / 2;
