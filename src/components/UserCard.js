@@ -7,6 +7,11 @@ const UserCardStyles = styled.div`
   background-color: var(--clr-dark-blue);
   border-radius: var(--bdr-rds);
   padding: 4rem;
+  img {
+    border-radius: 50%;
+    height: 11.7rem;
+    width: 11.7rem;
+  }
 `;
 
 const GridStyles = styled.div`
@@ -26,15 +31,19 @@ const UserCard = ({ user }) => {
 
   return (
     <UserCardStyles>
-      <UserInfo user={user} joinedDate={joinedDate} />
+      <img src={user.avatar_url} alt='avatar' />
 
-      <UserStats user={user} />
+      <div>
+        <UserInfo user={user} joinedDate={joinedDate} />
 
-      <GridStyles>
-        {links.map((link) => {
-          return <UserLinks user={user} linkType={link} />;
-        })}
-      </GridStyles>
+        <UserStats user={user} />
+
+        <GridStyles>
+          {links.map((link) => {
+            return <UserLinks user={user} linkType={link} />;
+          })}
+        </GridStyles>
+      </div>
     </UserCardStyles>
   );
 };
