@@ -13,7 +13,9 @@ const UserInfo = ({ user, joinedDate }) => {
     <UserInfoStyles>
       <img src={user.avatar_url} alt='avatar' />
       <h2>{user.name}</h2>
-      <a href={user.html_url}>@{user.login}</a>
+      <a href={user.html_url} target='_blank' rel='noreferrer'>
+        @{user.login}
+      </a>
       <p>Joined {joinedDate}</p>
       {!user.bio ? <p>No user bio</p> : <p>{user.bio}</p>}
     </UserInfoStyles>
