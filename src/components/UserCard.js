@@ -22,6 +22,7 @@ const UserCard = ({ user }) => {
       year: 'numeric',
     })
     .replace(',', ' ');
+  const links = ['location', 'website', 'twitter', 'company'];
 
   return (
     <UserCardStyles>
@@ -30,10 +31,9 @@ const UserCard = ({ user }) => {
       <UserStats user={user} />
 
       <GridStyles>
-        <UserLinks user={user} linkType='location' />
-        <UserLinks user={user} linkType='twitter' />
-        <UserLinks user={user} linkType='website' />
-        <UserLinks user={user} linkType='company' />
+        {links.map((link) => {
+          return <UserLinks user={user} linkType={link} />;
+        })}
       </GridStyles>
     </UserCardStyles>
   );
