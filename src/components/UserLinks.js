@@ -4,10 +4,16 @@ import { Icon } from '../svg';
 const UserLinksStyled = styled.div`
   background-color: transparent;
   color: var(--white);
+  margin-bottom: 1rem;
+
+  a {
+    color: var(--white);
+  }
 
   svg {
     margin-right: 2rem;
     fill: var(--white);
+    vertical-align: text-bottom;
   }
 
   &.faded {
@@ -40,7 +46,31 @@ const UserLinks = ({ user, linkType }) => {
     <UserLinksStyled className={!link ? 'faded' : ''}>
       <div>
         <Icon name={linkType} />
-        {link ? <>{link}</> : 'Not Available'}
+        {linkType === 'twitter' ? (
+          link ? (
+            <a
+              href={`https://twitter.com/${link}`}
+              target='_blank'
+              rel='noreferrer'
+            >
+              {link}
+            </a>
+          ) : (
+            'Not Available'
+          )
+        ) : linkType === 'website' ? (
+          link ? (
+            <a href={`https://${link}`} target='_blank' rel='noreferrer'>
+              {link}
+            </a>
+          ) : (
+            'Not Available'
+          )
+        ) : link ? (
+          <>{link}</>
+        ) : (
+          'Not Available'
+        )}
       </div>
     </UserLinksStyled>
   );
