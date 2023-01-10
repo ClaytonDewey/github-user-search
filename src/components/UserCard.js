@@ -2,21 +2,20 @@ import styled from 'styled-components';
 import UserInfo from './UserInfo';
 import UserLinks from './UserLinks';
 import UserStats from './UserStats';
+import { GridStyles } from '..';
 
 const UserCardStyles = styled.div`
   background-color: var(--clr-dark-blue);
   border-radius: var(--bdr-rds);
   padding: 4rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4rem;
   img {
     border-radius: 50%;
     height: 11.7rem;
     width: 11.7rem;
   }
-`;
-
-const GridStyles = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 `;
 
 const UserCard = ({ user }) => {
