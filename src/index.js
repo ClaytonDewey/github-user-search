@@ -1,7 +1,7 @@
 import React from 'react';
 import './reset.css';
 import ReactDOM from 'react-dom/client';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --clr-lt-blue: #60ABFF;
     --clr-faded-white: #8d95a2;
     --clr-link: #0079FF;
+    --clr-blue-gray: #90A4D4;
     --white: #fff;
 
     --ff-mono: "Space Mono";
@@ -52,6 +53,13 @@ const GlobalStyles = createGlobalStyle`
     font-size: var(--fs-sm);
     line-height: 2.5rem;
     font-weight: var(--fw-reg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
   }
   h1 {
     font-size: var(--fs-xlg);
@@ -84,6 +92,11 @@ const GlobalStyles = createGlobalStyle`
       text-decoration: underline;
     }
   }
+`;
+
+export const GridStyles = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
