@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import { useDarkMode } from './theme/useDarkMode';
+import { lightTheme, darkTheme } from './theme/Themes';
 import Header from './Header';
 import SearchBar from './SearchBar';
 import UserCard from './UserCard';
+import { GlobalStyles } from './theme/GlobalStyles';
 
 const AppStyles = styled.div`
   width: 73rem;
@@ -54,19 +57,24 @@ const App = () => {
   const updateUser = (user) => {
     setUserName(user);
   };
+  const [theme, themeToggler] = useDarkMode();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
   return (
-    <AppStyles>
-      <Header />
+    <ThemeProvider theme={themeMode}>
+      <GlobalStyles />
+      <AppStyles>
+        <Header theme={theme} themeToggler={themeToggler} />
 
-      <SearchBar
-        updateUser={updateUser}
-        search={search}
-        userName={userName}
-        error={error}
-      />
-      <UserCard user={user} />
-    </AppStyles>
+        <SearchBar
+          updateUser={updateUser}
+          search={search}
+          userName={userName}
+          error={error}
+        />
+        <UserCard user={user} />
+      </AppStyles>
+    </ThemeProvider>
   );
 };
 
