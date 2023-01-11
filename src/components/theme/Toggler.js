@@ -6,6 +6,12 @@ const TogglerStyled = styled.div`
     height: 0;
     width: 0;
   }
+
+  label {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 const Toggle = ({ theme, toggleTheme }) => {
