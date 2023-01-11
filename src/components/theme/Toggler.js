@@ -1,23 +1,29 @@
+import styled from 'styled-components';
 import { Icon } from '../../svg';
+const TogglerStyled = styled.div`
+  input {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+`;
 
 const Toggle = ({ theme, toggleTheme }) => {
   return (
-    <>
-      <Icon name='sun' />
+    <TogglerStyled>
       <div className='toggle-container'>
-        <input
-          type='checkbox'
-          id='mode'
-          className={`toggle ${theme}`}
-          onChange={toggleTheme}
-        />
         <label htmlFor='mode' className='label'>
-          <div className='ball'></div>
+          <span>{theme} </span>
+          {theme === 'light' ? <Icon name='sun' /> : <Icon name='moon' />}
+          <input
+            type='checkbox'
+            id='mode'
+            className={`toggle ${theme}`}
+            onChange={toggleTheme}
+          />
         </label>
-        {/* <span>{theme} Mode </span> */}
       </div>
-      <Icon name='moon' />
-    </>
+    </TogglerStyled>
   );
 };
 

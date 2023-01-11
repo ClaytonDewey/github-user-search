@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { useDarkMode } from './theme/useDarkMode';
+import { lightTheme, darkTheme } from './theme/Themes';
 import Toggle from './theme/Toggler';
 
 const HeaderStyled = styled.header`
@@ -17,10 +19,13 @@ const HeaderStyled = styled.header`
 `;
 
 const Header = () => {
+  const [theme, themeToggler] = useDarkMode();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
   return (
     <HeaderStyled>
       <h1>devfinder</h1>
-      <Toggle />
+      <Toggle theme={theme} toggleTheme={themeToggler} />
       {/* <p>
         Light <Icon name='sun' />
       </p> */}
