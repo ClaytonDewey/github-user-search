@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Icon } from '../svg';
+import Toggle from './theme/Toggler';
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -20,9 +20,10 @@ const Header = () => {
   return (
     <HeaderStyled>
       <h1>devfinder</h1>
-      <p>
+      <Toggle />
+      {/* <p>
         Light <Icon name='sun' />
-      </p>
+      </p> */}
       {/* <p>
         Dark <Icon name='moon' />
       </p> */}
