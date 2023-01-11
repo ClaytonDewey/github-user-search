@@ -18,13 +18,13 @@ const TogglerStyled = styled.div`
   }
 `;
 
-const Toggle = ({ theme, toggleTheme }) => {
+const Toggle = ({ theme, toggleTheme, themeText }) => {
   return (
     <TogglerStyled>
       <div className='toggle-container'>
         <label htmlFor='mode' className='label'>
-          <span>{theme} </span>
-          {theme === 'light' ? <Icon name='sun' /> : <Icon name='moon' />}
+          <span>{themeText} </span>
+          {theme === 'light' ? <Icon name='moon' /> : <Icon name='sun' />}
           <input
             type='checkbox'
             id='mode'

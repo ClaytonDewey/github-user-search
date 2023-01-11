@@ -16,11 +16,11 @@ const HeaderStyled = styled.header`
   }
 `;
 
-const Header = ({ theme, themeToggler }) => {
+const Header = ({ theme, themeToggler, themeText }) => {
   return (
     <HeaderStyled>
       <h1>devfinder</h1>
-      <Toggle theme={theme} toggleTheme={themeToggler} />
+      <Toggle theme={theme} toggleTheme={themeToggler} themeText={themeText} />
       {/* <p>
         Light <Icon name='sun' />
       </p> */}

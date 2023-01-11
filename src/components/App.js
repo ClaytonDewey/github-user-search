@@ -59,12 +59,17 @@ const App = () => {
   };
   const [theme, themeToggler] = useDarkMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
-
+  const themeText = theme === 'light' ? 'dark' : 'light';
+  console.log(themeText);
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
       <AppStyles>
-        <Header theme={theme} themeToggler={themeToggler} />
+        <Header
+          theme={theme}
+          themeToggler={themeToggler}
+          themeText={themeText}
+        />
 
         <SearchBar
           updateUser={updateUser}
