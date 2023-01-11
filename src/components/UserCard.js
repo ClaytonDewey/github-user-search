@@ -5,14 +5,14 @@ import UserStats from './UserStats';
 import { GridStyles } from './App';
 
 const UserCardStyles = styled.div`
-  background-color: var(--white);
-  color: #4b6a9b;
+  background-color: ${({ theme }) => theme.boxBackground};
+  /* color: #4b6a9b; */
   border-radius: var(--bdr-rds);
   padding: 4rem;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 4rem;
-  box-shadow: var(--bx-shd);
+  box-shadow: ${({ theme }) => theme.boxShadow};
   img {
     border-radius: 50%;
     height: 11.7rem;

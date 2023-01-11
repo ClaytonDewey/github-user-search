@@ -12,6 +12,10 @@ const TogglerStyled = styled.div`
       cursor: pointer;
     }
   }
+
+  svg {
+    fill: ${({ theme }) => theme.icon};
+  }
 `;
 
 const Toggle = ({ theme, toggleTheme }) => {

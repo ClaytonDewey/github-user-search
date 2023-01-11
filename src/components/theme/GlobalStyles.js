@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
     --clr-faded-white: #8d95a2;
     --clr-link: #0079FF;
     --clr-blue-gray: #90A4D4;
-    --white: #fff;
+    --white: #fefefe;
 
     --ff-mono: "Space Mono";
     --fw-bold: 700;
@@ -38,7 +38,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   html {
     background: ${({ theme }) => theme.body};
-    color: var(--clr-dark);
+    color: ${({ theme }) => theme.text};
     font-family: var(--ff-mono), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: var(--ff-reg);
     font-size: 62.5%;
