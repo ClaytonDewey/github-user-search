@@ -1,10 +1,4 @@
 {
-  "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#fff",
-    "titleBar.inactiveForeground": "#efefef",
-    "titleBar.activeBackground": "#8400ff",
-    "titleBar.inactiveBackground": "#7013c6"
-  },
   "emmet.includeLanguages": { 
     "javascript": "javascriptreact", 
     "vue-html": "html", 
