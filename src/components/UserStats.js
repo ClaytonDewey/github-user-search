@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const UserStatsStyled = styled.div`
-  background-color: var(--clr-dark);
+  background-color: var(--clr-light);
   border-radius: var(--bdr-rds);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

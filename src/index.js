@@ -27,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
     --fs-xsm: 1.3rem;
 
     --bdr-rds: 1.2rem;
+    --bx-shd: 0px 10px 15px rgba(0,0,0,0.1);
   }
   *,
   *::after,
@@ -42,8 +43,8 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
-    background: var(--clr-dark);
-    color: var(--clr-light);
+    background: var(--clr-light);
+    color: var(--clr-dark);
     font-family: var(--ff-mono), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: var(--ff-reg);
     font-size: 62.5%;
@@ -83,6 +84,7 @@ const GlobalStyles = createGlobalStyle`
   }
   button {
     cursor: pointer;
+    font-family: var(--ff-mono), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   a {
     color: var(--clr-link);
@@ -93,11 +95,11 @@ const GlobalStyles = createGlobalStyle`
     }
   }
   input {
-    font-family: var(--ff-mono);
+    font-family: var(--ff-mono), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: var(--fs-md);
 
     &::placeholder{
-      color: var(--white);
+      color: var(--clr-faded-white);
     }
   }
 `;

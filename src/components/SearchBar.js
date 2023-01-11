@@ -7,13 +7,15 @@ const SearchBarStyles = styled.form`
   width: 100%;
   margin-bottom: 2rem;
   input {
-    background-color: var(--clr-dark-blue);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--clr-faded-white);
+    /* color: var(--white); */
     border-radius: var(--bdr-rds);
     border: none;
     height: 6.9rem;
     width: 100%;
     padding-left: 7.5rem;
+    box-shadow: var(--bx-shd);
   }
   svg {
     position: absolute;

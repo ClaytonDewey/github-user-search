@@ -3,17 +3,20 @@ import { Icon } from '../svg';
 
 const UserLinksStyled = styled.div`
   background-color: transparent;
-  color: var(--white);
+  /* color: var(--white); */
+  color: #4b6a9b;
   margin-bottom: 1rem;
   gap: 0 2rem;
   overflow: hidden;
   a {
-    color: var(--white);
+    /* color: var(--white); */
+    color: #4b6a9b;
   }
 
   svg {
     margin-right: 2rem;
-    fill: var(--white);
+    /* fill: var(--white); */
+    fill: #4b6a9b;
     vertical-align: text-bottom;
   }
 
