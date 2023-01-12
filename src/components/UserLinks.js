@@ -4,19 +4,19 @@ import { Icon } from '../svg';
 const UserLinksStyled = styled.div`
   background-color: transparent;
   /* color: var(--white); */
-  color: #4b6a9b;
+  color: ${({ theme }) => theme.link};
   margin-bottom: 1rem;
   gap: 0 2rem;
   overflow: hidden;
   a {
     /* color: var(--white); */
-    color: #4b6a9b;
+    color: ${({ theme }) => theme.link};
   }
 
   svg {
     margin-right: 2rem;
     /* fill: var(--white); */
-    fill: #4b6a9b;
+    fill: ${({ theme }) => theme.link};
     vertical-align: text-bottom;
   }
 

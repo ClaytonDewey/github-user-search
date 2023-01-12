@@ -7,7 +7,6 @@ export const GlobalStyles = createGlobalStyle`
     --clr-primary: #0079FF;
     --clr-lt-blue: #60ABFF;
     --clr-faded-white: #8d95a2;
-    --clr-link: #0079FF;
     --clr-blue-gray: #90A4D4;
     --white: #fefefe;
 
@@ -81,7 +80,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: var(--ff-mono), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   a {
-    color: var(--clr-link);
+    color: var(--clr-primary);
     text-decoration: none;
 
     &:hover {

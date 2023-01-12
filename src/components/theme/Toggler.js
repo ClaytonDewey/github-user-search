@@ -7,14 +7,18 @@ const TogglerStyled = styled.div`
     width: 0;
   }
 
+  svg {
+    fill: ${({ theme }) => theme.icon};
+  }
+
   label {
     &:hover {
       cursor: pointer;
+      color: ${({ theme }) => theme.toggleHover};
+      svg {
+        fill: ${({ theme }) => theme.toggleHover};
+      }
     }
-  }
-
-  svg {
-    fill: ${({ theme }) => theme.icon};
   }
 `;
 
