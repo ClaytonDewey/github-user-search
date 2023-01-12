@@ -8,7 +8,8 @@ import UserCard from './UserCard';
 import { GlobalStyles } from './theme/GlobalStyles';
 
 const AppStyles = styled.div`
-  width: 73rem;
+  width: 100%;
+  max-width: 73rem;
   margin-left: auto;
   margin-right: auto;
 `;
