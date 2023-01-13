@@ -31,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   html,
   body {
-    margin: 0px auto;
+    margin: 2rem auto;
     width: 100%;
     box-sizing: border-box;
   }
@@ -47,13 +47,6 @@ export const GlobalStyles = createGlobalStyle`
     font-size: var(--fs-sm);
     line-height: 2.5rem;
     font-weight: var(--fw-reg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
   }
   h1 {
     font-size: var(--fs-xlg);
@@ -92,7 +85,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: var(--fs-md);
 
     &::placeholder{
-      color: var(--clr-faded-white);
+      color: ${({ theme }) => theme.placeHolder};
     }
   }
 
