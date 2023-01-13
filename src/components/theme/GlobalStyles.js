@@ -47,6 +47,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: var(--fs-sm);
     line-height: 2.5rem;
     font-weight: var(--fw-reg);
+    padding: 2rem;
   }
   h1 {
     font-size: var(--fs-xlg);

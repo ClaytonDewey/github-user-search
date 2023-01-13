@@ -7,12 +7,8 @@ const HeaderStyled = styled.header`
   align-items: flex-end;
   margin-bottom: 4rem;
 
-  p {
-    /* color: var(--clr-blue-gray); */
-  }
   svg {
     vertical-align: text-bottom;
-    /* fill: var(--clr-blue-gray); */
   }
 `;
 
@@ -21,12 +17,6 @@ const Header = ({ theme, themeToggler, themeText }) => {
     <HeaderStyled>
       <h1>devfinder</h1>
       <Toggle theme={theme} toggleTheme={themeToggler} themeText={themeText} />
-      {/* <p>
-        Light <Icon name='sun' />
-      </p> */}
-      {/* <p>
-        Dark <Icon name='moon' />
-      </p> */}
     </HeaderStyled>
   );
 };

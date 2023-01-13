@@ -9,31 +9,30 @@ const SearchBarStyles = styled.form`
   input {
     background-color: ${({ theme }) => theme.boxBackground};
     color: var(--clr-faded-white);
-    /* color: var(--white); */
     border-radius: var(--bdr-rds);
     border: none;
-    height: 6.9rem;
+    height: 6rem;
     width: 100%;
-    padding-left: 7.5rem;
+    padding-left: 5rem;
     box-shadow: ${({ theme }) => theme.boxShadow};
   }
   svg {
     position: absolute;
     top: 50%;
-    left: 2.5rem;
+    left: 1.5rem;
     transform: translateY(-50%);
   }
   button {
     position: absolute;
     right: 1rem;
-    top: 1rem;
+    top: 7px;
     background-color: var(--clr-primary);
     color: var(--white);
     border: none;
     border-radius: var(--bdr-rds);
-    height: 5rem;
-    width: 10.6rem;
-    transition: all 0.25s ease-in-out;
+    height: 4.6rem;
+    width: 8.4rem;
+    transition: background-color 0.25s ease-in-out;
 
     &:hover {
       background-color: var(--clr-lt-blue);
@@ -44,6 +43,20 @@ const SearchBarStyles = styled.form`
     position: absolute;
     right: 15rem;
     top: 35%;
+  }
+
+  @media screen and (min-width: 64em) {
+    input {
+      height: 6.9rem;
+    }
+    svg {
+      left: 2.5rem;
+    }
+    button {
+      top: 1rem;
+      height: 5rem;
+      width: 10.6rem;
+    }
   }
 `;
 
