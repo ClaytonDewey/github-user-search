@@ -8,10 +8,10 @@ const UserCardStyles = styled.div`
   background-color: ${({ theme }) => theme.boxBackground};
   /* color: #4b6a9b; */
   border-radius: var(--bdr-rds);
-  padding: 4rem;
-  display: grid;
+  padding: 2rem;
+  /* display: grid;
   grid-template-columns: auto 1fr;
-  gap: 4rem;
+  gap: 4rem; */
   box-shadow: ${({ theme }) => theme.boxShadow};
   img {
     border-radius: 50%;
@@ -32,8 +32,6 @@ const UserCard = ({ user }) => {
 
   return (
     <UserCardStyles>
-      <img src={user.avatar_url} alt='avatar' />
-
       <div>
         <UserInfo user={user} joinedDate={joinedDate} />
 
