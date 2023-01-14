@@ -51,14 +51,12 @@ export const GlobalStyles = createGlobalStyle`
   }
   h1 {
     font-size: var(--fs-xlg);
-    line-height: 3.8rem;
   }
   h2 {
-    font-size: var(--fs-lg);
-    line-height: 3.3rem;
+    font-size: var(--fs-md);
   }
   h3 {
-    font-size: var(--fs-md);
+    font-size: var(--fs-xsm);
   }
   h4 {
     font-size: var(--fs-xsm);
@@ -68,6 +66,29 @@ export const GlobalStyles = createGlobalStyle`
   }
   h3, h4 {
     font-weight: var(--fw-reg);
+  }
+  @media screen and (min-width: 64em) {
+      h1 {
+    font-size: var(--fs-xlg);
+    line-height: 3.8rem;
+  }
+  h2 {
+    font-size: var(--fs-md);
+    line-height: 3.3rem;
+  }
+  h3 {
+    font-size: var(--fs-xsm);
+  }
+  h4 {
+    font-size: var(--fs-xsm);
+  }
+  h1, h2 {
+    font-weight: var(--fw-bold);
+  }
+  h3, h4 {
+    font-weight: var(--fw-reg);
+  }
+
   }
   button {
     cursor: pointer;

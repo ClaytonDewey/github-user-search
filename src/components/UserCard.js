@@ -6,17 +6,24 @@ import { GridStyles } from './App';
 
 const UserCardStyles = styled.div`
   background-color: ${({ theme }) => theme.boxBackground};
-  /* color: #4b6a9b; */
   border-radius: var(--bdr-rds);
   padding: 2rem;
-  /* display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 4rem; */
   box-shadow: ${({ theme }) => theme.boxShadow};
+
   img {
     border-radius: 50%;
-    height: 11.7rem;
-    width: 11.7rem;
+    height: 7rem;
+    width: 7rem;
+    float: left;
+    margin-right: 2rem;
+  }
+
+  @media screen and (min-width: 64em) {
+    img {
+      border-radius: 50%;
+      height: 11.7rem;
+      width: 11.7rem;
+    }
   }
 `;
 
@@ -33,16 +40,13 @@ const UserCard = ({ user }) => {
   return (
     <UserCardStyles>
       <div>
+        <img src={user.avatar_url} alt='avatar' />
+
         <UserInfo user={user} joinedDate={joinedDate} />
 
         <UserStats user={user} />
 
-        <GridStyles
-          gtc='repeat(2, 1fr)'
-          gtr='repeat(2, 1fr)'
-          gcg='2rem'
-          grg='1rem'
-        >
+        <GridStyles>
           {links.map((link, idx) => {
             return (
               <UserLinks
