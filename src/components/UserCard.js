@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import UserInfo from './UserInfo';
 import UserLinks from './UserLinks';
 import UserStats from './UserStats';
-import { GridStyles } from './App';
 
 const UserCardStyles = styled.div`
   background-color: ${({ theme }) => theme.boxBackground};
@@ -19,11 +18,23 @@ const UserCardStyles = styled.div`
   }
 
   @media screen and (min-width: 64em) {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: auto 1fr;
+    padding: 4rem;
+
     img {
       border-radius: 50%;
       height: 11.7rem;
       width: 11.7rem;
+      float: none;
     }
+  }
+`;
+
+const UserCardGridStyles = styled.div`
+  @media screen and (min-width: 36em) {
+    display: grid;
   }
 `;
 
@@ -39,14 +50,13 @@ const UserCard = ({ user }) => {
 
   return (
     <UserCardStyles>
+      <img src={user.avatar_url} alt='avatar' />
       <div>
-        <img src={user.avatar_url} alt='avatar' />
-
         <UserInfo user={user} joinedDate={joinedDate} />
 
         <UserStats user={user} />
 
-        <GridStyles>
+        <UserCardGridStyles>
           {links.map((link, idx) => {
             return (
               <UserLinks
@@ -57,7 +67,7 @@ const UserCard = ({ user }) => {
               />
             );
           })}
-        </GridStyles>
+        </UserCardGridStyles>
       </div>
     </UserCardStyles>
   );

@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
     --ff-mono: "Space Mono";
     --fw-bold: 700;
     --fw-reg: 400;
-    --fs-xlg: 2.8rem;
+    --fs-xlg: 2.6rem;
     --fs-lg: 2.2rem;
     --fs-md: 1.6rem;
     --fs-sm: 1.5rem;
@@ -61,14 +61,14 @@ export const GlobalStyles = createGlobalStyle`
   h4 {
     font-size: var(--fs-xsm);
   }
-  h1, h2 {
+  h1 {
     font-weight: var(--fw-bold);
   }
-  h3, h4 {
+  h2, h3, h4 {
     font-weight: var(--fw-reg);
   }
   @media screen and (min-width: 64em) {
-      h1 {
+  h1 {
     font-size: var(--fs-xlg);
     line-height: 3.8rem;
   }
@@ -81,12 +81,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   h4 {
     font-size: var(--fs-xsm);
-  }
-  h1, h2 {
-    font-weight: var(--fw-bold);
-  }
-  h3, h4 {
-    font-weight: var(--fw-reg);
   }
 
   }

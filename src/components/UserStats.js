@@ -7,12 +7,25 @@ const UserStatsStyled = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   padding: 2rem;
   margin-bottom: 2rem;
+  height: 8.5rem;
   div {
     display: inline;
+    text-align: center;
+    /* border: 1px solid; */
+    font-size: 1.1rem;
     span {
       display: block;
-      font-size: var(--fs-lg);
+      font-size: var(--fs-md);
       font-weight: var(--fw-bold);
+    }
+  }
+
+  @media screen and (min-width: 40em) {
+    div {
+      font-size: var(--fs-xsm);
+      span {
+        font-size: var(--fs-lg);
+      }
     }
   }
 `;

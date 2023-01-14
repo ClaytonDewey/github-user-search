@@ -48,6 +48,7 @@ const SearchBarStyles = styled.form`
   @media screen and (min-width: 64em) {
     input {
       height: 6.9rem;
+      padding-left: 7.5rem;
     }
     svg {
       left: 2.5rem;

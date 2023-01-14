@@ -3,19 +3,16 @@ import { Icon } from '../svg';
 
 const UserLinksStyled = styled.div`
   background-color: transparent;
-  /* color: var(--white); */
   color: ${({ theme }) => theme.link};
   margin-bottom: 1rem;
   gap: 0 2rem;
   overflow: hidden;
   a {
-    /* color: var(--white); */
     color: ${({ theme }) => theme.link};
   }
 
   svg {
     margin-right: 2rem;
-    /* fill: var(--white); */
     fill: ${({ theme }) => theme.link};
     vertical-align: text-bottom;
   }
@@ -27,22 +24,25 @@ const UserLinksStyled = styled.div`
       fill: var(--clr-faded-white);
     }
   }
-  div {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  &.div1 {
-    grid-area: 1 / 1 / 2 / 2;
-  }
-  &.div2 {
-    grid-area: 2 / 1 / 3 / 2;
-  }
-  &.div3 {
-    grid-area: 1 / 2 / 2 / 3;
-  }
-  &.div4 {
-    grid-area: 2 / 2 / 3 / 3;
+
+  @media screen and (min-width: 36em) {
+    div {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &.div1 {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    &.div2 {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    &.div3 {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    &.div4 {
+      grid-area: 2 / 2 / 3 / 3;
+    }
   }
 `;
 const UserLinks = ({ user, linkType, idx }) => {
@@ -72,8 +72,7 @@ const UserLinks = ({ user, linkType, idx }) => {
             <a
               href={`https://twitter.com/${link}`}
               target='_blank'
-              rel='noreferrer'
-            >
+              rel='noreferrer'>
               {link}
             </a>
           ) : (
