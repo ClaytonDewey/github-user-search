@@ -50,24 +50,17 @@ export const GlobalStyles = createGlobalStyle`
     padding: 2rem;
   }
   h1 {
-    font-size: var(--fs-xlg);
-  }
-  h2 {
     font-size: var(--fs-md);
-  }
-  h3 {
-    font-size: var(--fs-xsm);
-  }
-  h4 {
-    font-size: var(--fs-xsm);
-  }
-  h1 {
     font-weight: var(--fw-bold);
   }
-  h2, h3, h4 {
+  h2, p {
+    font-size: var(--fs-xsm);
+  }
+  h2{
     font-weight: var(--fw-reg);
   }
-  @media screen and (min-width: 64em) {
+
+  @media screen and (min-width: 36em) {
   h1 {
     font-size: var(--fs-xlg);
     line-height: 3.8rem;
@@ -75,12 +68,6 @@ export const GlobalStyles = createGlobalStyle`
   h2 {
     font-size: var(--fs-md);
     line-height: 3.3rem;
-  }
-  h3 {
-    font-size: var(--fs-xsm);
-  }
-  h4 {
-    font-size: var(--fs-xsm);
   }
 
   }
