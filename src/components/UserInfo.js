@@ -3,10 +3,20 @@ import { GridStyles } from './App';
 
 const UserInfoStyles = styled.div`
   margin-bottom: 3rem;
-  /* a {
-    display: inline-block;
-    margin-bottom: 3rem;
-  } */
+
+  img {
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    float: left;
+  }
+
+  @media screen and (min-width: 64em) {
+    img {
+      height: 11.7rem;
+      width: 11.7rem;
+    }
+  }
 `;
 
 const UserInfo = ({ user, joinedDate }) => {
