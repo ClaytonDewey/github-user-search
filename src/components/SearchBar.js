@@ -76,7 +76,7 @@ const SearchBar = ({ search, error }) => {
   return (
     <SearchBarStyles onSubmit={handleSubmit}>
       <input
-        type='text'
+        type='search'
         onChange={handleChange}
         placeholder='Search GitHub username...'
       />
